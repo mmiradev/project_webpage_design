@@ -1,0 +1,113 @@
+@font-face{
+    font-family: "Apple Chancery";
+    src:url('../resources/fonts/Apple\ Chancery.ttf');
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    background-color: rgb(255, 252, 249);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    margin: 0;
+    padding: 0;
+    color: crimson;
+    font-weight: bold;
+    height: 5em;
+}
+
+header > a{
+    grid-area: 1/1/2/2;
+    text-align: left;
+    font-size: 3em;
+    padding: .5em .7em;
+}
+
+header > div{
+    grid-area: 1/5/2/6;
+    text-align: right;
+    padding: 1em;
+}
+
+header div a{
+    padding: .5em;
+}
+
+header a{
+    text-decoration: none;
+    color: crimson;
+    transition: transform 0.3s ease-in-out;
+}
+
+header a:visited, header a:active{
+    color: crimson;
+}
+
+header a:hover{
+    color: #71c351;
+    transform: rotate(-45deg);
+}
+
+main{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
+    place-items: center;
+}
+
+main section{
+    grid-area: 3/1/5/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+main figure{
+    display: flex;
+}
+
+
+section{
+    display: flex;
+    padding: 2em auto;
+}
+
+main > article{
+    grid-area: 3/3/5/4;
+    border-left: .07em solid rgb(155, 155, 155);
+    padding: 2em;
+}
+
+main > article h2 span{
+    font-family: "Apple Chancery";
+    color: crimson;
+}
+
+figure audio{
+    width: 80%;
+}
+
+footer{
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: crimson;
+    color: rgb(255, 252, 249);
+    padding: 1.1em;
+    width: 100%;
+    margin-top: 5em;
+}
+
+/* outline: crimson solid thin; */
